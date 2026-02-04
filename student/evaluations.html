@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>التقييمات | ميدانك</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Cairo', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans antialiased bg-gradient-to-br from-slate-50 via-white to-indigo-50">
+    
+    <div class="flex min-h-screen">
+        <!-- Sidebar -->
+        <aside class="hidden lg:flex flex-col w-72 bg-white border-l border-slate-200 shadow-xl fixed right-0 top-0 h-screen overflow-y-auto">
+            <div class="p-6 border-b border-slate-200">
+                <a href="../index.html" class="flex items-center gap-3 group">
+                    <div class="relative">
+                        <div class="absolute inset-0 bg-gradient-to-r from-indigo-600 to-blue-600 rounded-2xl blur opacity-75 group-hover:opacity-100 transition duration-300"></div>
+                        <div class="relative w-12 h-12 bg-gradient-to-br from-indigo-600 to-blue-600 rounded-2xl flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform duration-300">
+                            <i class="fas fa-briefcase text-white text-xl"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <span class="block text-2xl font-black bg-gradient-to-r from-indigo-600 to-blue-600 bg-clip-text text-transparent">ميدانك</span>
+                        <span class="block text-xs text-slate-500 font-semibold">لوحة الطالب</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="p-6 bg-gradient-to-br from-indigo-50 to-blue-50 border-b border-slate-200">
+                <div class="flex items-center gap-3">
+                    <div class="w-14 h-14 bg-gradient-to-br from-indigo-600 to-blue-600 rounded-2xl flex items-center justify-center shadow-lg">
+                        <span class="text-white text-xl font-bold">أم</span>
+                    </div>
+                    <div class="flex-1 min-w-0">
+                        <h3 class="font-bold text-slate-900 truncate">أحمد محمد</h3>
+                        <p class="text-sm text-slate-600">علوم حاسوب</p>
+                    </div>
+                </div>
+            </div>
+
+            <nav class="flex-1 p-4 space-y-1">
+                <a href="dashboard.html" class="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-50 rounded-xl font-semibold transition-all group hover:text-indigo-600">
+                    <i class="fas fa-home text-lg group-hover:scale-110 transition-transform"></i>
+                    <span>لوحة التحكم</span>
+                </a>
+                <a href="profile.html" class="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-50 rounded-xl font-semibold transition-all group hover:text-indigo-600">
+                    <i class="fas fa-user text-lg group-hover:scale-110 transition-transform"></i>
+                    <span>الملف المهني</span>
+                </a>
+                <a href="browse.html" class="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-50 rounded-xl font-semibold transition-all group hover:text-indigo-600">
+                    <i class="fas fa-search text-lg group-hover:scale-110 transition-transform"></i>
+                    <span>فرص التدريب</span>
+                </a>
+                <a href="applications.html" class="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-50 rounded-xl font-semibold transition-all group hover:text-indigo-600">
+                    <i class="fas fa-file-alt text-lg group-hover:scale-110 transition-transform"></i>
+                    <span>طلباتي</span>
+                </a>
+                <a href="reports.html" class="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-50 rounded-xl font-semibold transition-all group hover:text-indigo-600">
+                    <i class="fas fa-chart-bar text-lg group-hover:scale-110 transition-transform"></i>
+                    <span>التقارير</span>
+                </a>
+                <a href="messages.html" class="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-50 rounded-xl font-semibold transition-all group hover:text-indigo-600">
+                    <i class="fas fa-comments text-lg group-hover:scale-110 transition-transform"></i>
+                    <span>الرسائل</span>
+                    <span class="mr-auto px-2 py-1 bg-red-500 text-white text-xs rounded-full">3</span>
+                </a>
+                <a href="evaluations.html" class="flex items-center gap-3 px-4 py-3 bg-gradient-to-r from-indigo-600 to-blue-600 text-white rounded-xl shadow-lg font-semibold group">
+                    <i class="fas fa-star text-lg"></i>
+                    <span>التقييمات</span>
+                </a>
+            </nav>
+
+            <div class="p-4 border-t border-slate-200">
+                <a href="../index.html" class="flex items-center gap-3 px-4 py-3 text-red-600 hover:bg-red-50 rounded-xl font-semibold transition-all group">
+                    <i class="fas fa-sign-out-alt text-lg group-hover:scale-110 transition-transform"></i>
+                    <span>تسجيل الخروج</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 lg:mr-72">
+            <!-- Top Bar -->
+            <div class="sticky top-0 z-40 bg-white/80 backdrop-blur-xl border-b border-slate-200 shadow-sm">
+                <div class="px-4 sm:px-6 lg:px-8 py-4">
+                    <div class="flex items-center justify-between">
+                        <button class="lg:hidden p-2 text-slate-600 hover:text-indigo-600 hover:bg-slate-100 rounded-xl transition-all">
+                            <i class="fas fa-bars text-2xl"></i>
+                        </button>
+                        <h2 class="text-xl font-bold text-slate-900">التقييمات</h2>
+                        <button class="relative p-2 text-slate-600 hover:text-indigo-600 hover:bg-slate-100 rounded-xl transition-all">
+                            <i class="fas fa-bell text-xl"></i>
+                            <span class="absolute top-0 left-0 w-2 h-2 bg-red-500 rounded-full"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Page Content -->
+            <div class="p-4 sm:p-6 lg:p-8">
+                <!-- My Rating -->
+                <div class="bg-gradient-to-br from-yellow-50 to-orange-50 border-2 border-yellow-300 rounded-2xl p-8 mb-8">
+                    <div class="flex flex-col lg:flex-row items-center gap-8">
+                        <div class="flex-shrink-0">
+                            <div class="relative">
+                                <div class="w-32 h-32 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-full flex items-center justify-center shadow-2xl">
+                                    <div class="text-center text-white">
+                                        <div class="text-5xl font-black mb-1">4.8</div>
+                                        <div class="flex items-center justify-center gap-1">
+                                            <i class="fas fa-star text-2xl"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="absolute -bottom-2 -right-2 w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center shadow-lg border-4 border-yellow-50">
+                                    <i class="fas fa-trophy text-white text-xl"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex-1 text-center lg:text-right">
+                            <h2 class="text-3xl font-black text-slate-900 mb-3">تقييمك الإجمالي</h2>
+                            <p class="text-lg text-slate-600 mb-4">بناءً على 3 تقييمات من الشركات والمشرفين</p>
+                            <div class="flex flex-wrap gap-3 justify-center lg:justify-start">
+                                <div class="px-4 py-2 bg-white rounded-xl border-2 border-yellow-300 font-semibold text-slate-700">
+                                    <i class="fas fa-star text-yellow-500 ml-1"></i>
+                                    5 نجوم: <span class="text-green-600 font-bold">2</span>
+                                </div>
+                                <div class="px-4 py-2 bg-white rounded-xl border-2 border-yellow-300 font-semibold text-slate-700">
+                                    <i class="fas fa-star text-yellow-500 ml-1"></i>
+                                    4 نجوم: <span class="text-blue-600 font-bold">1</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tabs -->
+                <div class="bg-white rounded-2xl shadow-lg border border-slate-200 p-2 mb-6 inline-flex gap-2">
+                    <button class="px-6 py-3 bg-gradient-to-r from-indigo-600 to-blue-600 text-white rounded-xl font-bold shadow-lg">التقييمات الواردة</button>
+                    <button class="px-6 py-3 text-slate-600 hover:bg-slate-50 rounded-xl font-bold transition-all">تقييماتي للشركات</button>
+                </div>
+
+                <!-- Received Evaluations -->
+                <div class="space-y-6">
+                    <!-- Excellent Rating -->
+                    <div class="group bg-white rounded-2xl shadow-lg border-2 border-transparent hover:border-green-300 hover:shadow-2xl transition-all duration-300 p-6">
+                        <div class="flex flex-col lg:flex-row gap-6">
+                            <div class="flex-shrink-0">
+                                <div class="w-20 h-20 bg-gradient-to-br from-green-100 to-emerald-100 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                                    <i class="fas fa-building text-4xl text-green-600"></i>
+                                </div>
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex items-start justify-between mb-4">
+                                    <div>
+                                        <h3 class="text-2xl font-bold text-slate-900 mb-2">شركة التقنية المتقدمة</h3>
+                                        <p class="text-slate-600 mb-3">تدريب تطوير تطبيقات الويب</p>
+                                        <div class="flex items-center gap-2 mb-3">
+                                            <div class="flex gap-1">
+                                                <i class="fas fa-star text-yellow-500 text-xl"></i>
+                                                <i class="fas fa-star text-yellow-500 text-xl"></i>
+                                                <i class="fas fa-star text-yellow-500 text-xl"></i>
+                                                <i class="fas fa-star text-yellow-500 text-xl"></i>
+                                                <i class="fas fa-star text-yellow-500 text-xl"></i>
+                                            </div>
+                                            <span class="text-2xl font-black text-slate-900">5.0</span>
+                                        </div>
+                                    </div>
+                                    <span class="text-sm text-slate-500 flex-shrink-0">20 يناير 2024</span>
+                                </div>
+                                
+                                <div class="bg-green-50 border border-green-200 rounded-xl p-4 mb-4">
+                                    <p class="text-green-900 font-semibold mb-3">متدرب متميز ومجتهد!</p>
+                                    <p class="text-slate-700 leading-relaxed">أظهر أحمد مهارات تقنية ممتازة والتزاماً كبيراً خلال فترة التدريب. كان دائماً حريصاً على التعلم وإنجاز المهام بدقة عالية. نوصي به بشدة لأي فرصة مستقبلية.</p>
+                                </div>
+
+                                <div class="grid sm:grid-cols-3 gap-4">
+                                    <div class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-4 border border-green-200">
+                                        <div class="flex items-center gap-2 mb-2">
+                                            <i class="fas fa-code text-green-600"></i>
+                                            <span class="text-sm font-bold text-slate-700">المهارات التقنية</span>
+                                        </div>
+                                        <div class="flex items-center gap-2">
+                                            <div class="flex gap-0.5">
+                                                <i class="fas fa-star text-green-500 text-sm"></i>
+                                                <i class="fas fa-star text-green-500 text-sm"></i>
+                                                <i class="fas fa-star text-green-500 text-sm"></i>
+                                                <i class="fas fa-star text-green-500 text-sm"></i>
+                                                <i class="fas fa-star text-green-500 text-sm"></i>
+                                            </div>
+                                            <span class="font-bold text-green-600">5/5</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-4 border border-green-200">
+                                        <div class="flex items-center gap-2 mb-2">
+                                            <i class="fas fa-users text-green-600"></i>
+                                            <span class="text-sm font-bold text-slate-700">العمل الجماعي</span>
+                                        </div>
+                                        <div class="flex items-center gap-2">
+                                            <div class="flex gap-0.5">
+                                                <i class="fas fa-star text-green-500 text-sm"></i>
+                                                <i class="fas fa-star text-green-500 text-sm"></i>
+                                                <i class="fas fa-star text-green-500 text-sm"></i>
+                                                <i class="fas fa-star text-green-500 text-sm"></i>
+                                                <i class="fas fa-star text-green-500 text-sm"></i>
+                                            </div>
+                                            <span class="font-bold text-green-600">5/5</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-4 border border-green-200">
+                                        <div class="flex items-center gap-2 mb-2">
+                                            <i class="fas fa-clock text-green-600"></i>
+                                            <span class="text-sm font-bold text-slate-700">الالتزام</span>
+                                        </div>
+                                        <div class="flex items-center gap-2">
+                                            <div class="flex gap-0.5">
+                                                <i class="fas fa-star text-green-500 text-sm"></i>
+                                                <i class="fas fa-star text-green-500 text-sm"></i>
+                                                <i class="fas fa-star text-green-500 text-sm"></i>
+                                                <i class="fas fa-star text-green-500 text-sm"></i>
+                                                <i class="fas fa-star text-green-500 text-sm"></i>
+                                            </div>
+                                            <span class="font-bold text-green-600">5/5</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Good Rating -->
+                    <div class="group bg-white rounded-2xl shadow-lg border-2 border-transparent hover:border-blue-300 hover:shadow-2xl transition-all duration-300 p-6">
+                        <div class="flex flex-col lg:flex-row gap-6">
+                            <div class="flex-shrink-0">
+                                <div class="w-20 h-20 bg-gradient-to-br from-blue-100 to-indigo-100 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                                    <i class="fas fa-university text-4xl text-blue-600"></i>
+                                </div>
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex items-start justify-between mb-4">
+                                    <div>
+                                        <h3 class="text-2xl font-bold text-slate-900 mb-2">جامعة الملك سعود - مشرف التدريب</h3>
+                                        <p class="text-slate-600 mb-3">إشراف أكاديمي</p>
+                                        <div class="flex items-center gap-2 mb-3">
+                                            <div class="flex gap-1">
+                                                <i class="fas fa-star text-yellow-500 text-xl"></i>
+                                                <i class="fas fa-star text-yellow-500 text-xl"></i>
+                                                <i class="fas fa-star text-yellow-500 text-xl"></i>
+                                                <i class="fas fa-star text-yellow-500 text-xl"></i>
+                                                <i class="far fa-star text-yellow-500 text-xl"></i>
+                                            </div>
+                                            <span class="text-2xl font-black text-slate-900">4.0</span>
+                                        </div>
+                                    </div>
+                                    <span class="text-sm text-slate-500 flex-shrink-0">18 يناير 2024</span>
+                                </div>
+                                
+                                <div class="bg-blue-50 border border-blue-200 rounded-xl p-4 mb-4">
+                                    <p class="text-blue-900 font-semibold mb-3">أداء جيد جداً</p>
+                                    <p class="text-slate-700 leading-relaxed">طالب ملتزم ومجتهد. قدم تقاريره في الوقت المحدد وأظهر تطوراً ملحوظاً في مهاراته. ننصح بالاستمرار في التطوير الذاتي.</p>
+                                </div>
+
+                                <div class="grid sm:grid-cols-3 gap-4">
+                                    <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-4 border border-blue-200">
+                                        <div class="flex items-center gap-2 mb-2">
+                                            <i class="fas fa-file-alt text-blue-600"></i>
+                                            <span class="text-sm font-bold text-slate-700">جودة التقارير</span>
+                                        </div>
+                                        <div class="flex items-center gap-2">
+                                            <div class="flex gap-0.5">
+                                                <i class="fas fa-star text-blue-500 text-sm"></i>
+                                                <i class="fas fa-star text-blue-500 text-sm"></i>
+                                                <i class="fas fa-star text-blue-500 text-sm"></i>
+                                                <i class="fas fa-star text-blue-500 text-sm"></i>
+                                                <i class="far fa-star text-blue-500 text-sm"></i>
+                                            </div>
+                                            <span class="font-bold text-blue-600">4/5</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-4 border border-blue-200">
+                                        <div class="flex items-center gap-2 mb-2">
+                                            <i class="fas fa-comments text-blue-600"></i>
+                                            <span class="text-sm font-bold text-slate-700">التواصل</span>
+                                        </div>
+                                        <div class="flex items-center gap-2">
+                                            <div class="flex gap-0.5">
+                                                <i class="fas fa-star text-blue-500 text-sm"></i>
+                                                <i class="fas fa-star text-blue-500 text-sm"></i>
+                                                <i class="fas fa-star text-blue-500 text-sm"></i>
+                                                <i class="fas fa-star text-blue-500 text-sm"></i>
+                                                <i class="far fa-star text-blue-500 text-sm"></i>
+                                            </div>
+                                            <span class="font-bold text-blue-600">4/5</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-4 border border-blue-200">
+                                        <div class="flex items-center gap-2 mb-2">
+                                            <i class="fas fa-chart-line text-blue-600"></i>
+                                            <span class="text-sm font-bold text-slate-700">التطور</span>
+                                        </div>
+                                        <div class="flex items-center gap-2">
+                                            <div class="flex gap-0.5">
+                                                <i class="fas fa-star text-blue-500 text-sm"></i>
+                                                <i class="fas fa-star text-blue-500 text-sm"></i>
+                                                <i class="fas fa-star text-blue-500 text-sm"></i>
+                                                <i class="fas fa-star text-blue-500 text-sm"></i>
+                                                <i class="far fa-star text-blue-500 text-sm"></i>
+                                            </div>
+                                            <span class="font-bold text-blue-600">4/5</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>
