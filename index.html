@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ميدانك - منصة التدريب الجامعي والمهني</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Cairo', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.6s ease-out',
+                        'fade-in': 'fadeIn 0.8s ease-out',
+                        'slide-in-right': 'slideInRight 0.5s ease-out',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideInRight: {
+                            '0%': { transform: 'translateX(-100%)' },
+                            '100%': { transform: 'translateX(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans antialiased bg-gradient-to-br from-slate-50 via-white to-indigo-50">
+    
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-xl border-b border-slate-200/60 shadow-sm">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="index.html" class="flex items-center gap-3 group">
+                    <div class="relative">
+                        <div class="absolute inset-0 bg-gradient-to-r from-indigo-600 to-blue-600 rounded-2xl blur opacity-75 group-hover:opacity-100 transition duration-300"></div>
+                        <div class="relative w-12 h-12 bg-gradient-to-br from-indigo-600 to-blue-600 rounded-2xl flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform duration-300">
+                            <i class="fas fa-briefcase text-white text-xl"></i>
+                        </div>
+                    </div>
+                    <span class="text-3xl font-black bg-gradient-to-r from-indigo-600 via-blue-600 to-cyan-600 bg-clip-text text-transparent">ميدانك</span>
+                </a>
+                
+                <div class="hidden lg:flex items-center gap-8">
+                    <a href="#features" class="text-slate-600 hover:text-indigo-600 font-semibold transition-all duration-200 hover:scale-105">المميزات</a>
+                    <a href="#workflow" class="text-slate-600 hover:text-indigo-600 font-semibold transition-all duration-200 hover:scale-105">كيف تعمل</a>
+                    <a href="#training-types" class="text-slate-600 hover:text-indigo-600 font-semibold transition-all duration-200 hover:scale-105">أنواع التدريب</a>
+                    <a href="student/dashboard.html" class="group relative px-6 py-2.5 overflow-hidden rounded-xl font-bold text-white shadow-lg hover:shadow-2xl transition-all duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-r from-indigo-600 to-blue-600"></div>
+                        <div class="absolute inset-0 bg-gradient-to-r from-blue-600 to-cyan-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <span class="relative flex items-center gap-2">
+                            <i class="fas fa-sign-in-alt"></i>
+                            دخول
+                        </span>
+                    </a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button class="lg:hidden p-2 text-slate-600 hover:text-indigo-600">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative py-20 lg:py-32 overflow-hidden">
+        <!-- Background Gradient -->
+        <div class="absolute inset-0 bg-gradient-to-br from-indigo-600 via-blue-600 to-cyan-500"></div>
+        
+        <!-- Animated Background Pattern -->
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute inset-0" style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 40px 40px;"></div>
+        </div>
+        
+        <!-- Floating Shapes -->
+        <div class="absolute top-20 right-10 w-72 h-72 bg-blue-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
+        <div class="absolute bottom-20 left-10 w-72 h-72 bg-indigo-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse delay-75"></div>
+        
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-5xl mx-auto text-center text-white">
+                <!-- Badge -->
+                <div class="mb-8 inline-flex items-center gap-2 px-6 py-3 bg-white/10 backdrop-blur-md rounded-full border border-white/20 shadow-lg animate-fade-in-up">
+                    <div class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                    <i class="fas fa-rocket"></i>
+                    <span class="font-bold">منصة التدريب الجامعي والمهني الأولى</span>
+                </div>
+                
+                <!-- Main Heading -->
+                <h1 class="text-5xl sm:text-6xl lg:text-7xl font-black mb-6 leading-tight animate-fade-in-up">
+                    ابدأ تدريبك المعتمد
+                    <span class="block mt-2 bg-gradient-to-r from-cyan-300 via-blue-200 to-white bg-clip-text text-transparent">من مكان واحد</span>
+                </h1>
+                
+                <!-- Description -->
+                <p class="text-xl lg:text-2xl mb-12 text-white/90 leading-relaxed max-w-3xl mx-auto animate-fade-in">
+                    اكتشف فرص تدريب مناسبة لتخصصك، قدّم بسهولة، وتابع الموافقات والتقارير والتقييمات داخل منصة واحدة تربطك بالشركة والجامعة
+                </p>
+                
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12 animate-fade-in">
+                    <a href="student/dashboard.html" class="group relative px-8 py-4 overflow-hidden rounded-2xl font-bold text-lg shadow-2xl transition-all duration-300 hover:scale-105">
+                        <div class="absolute inset-0 bg-white"></div>
+                        <div class="absolute inset-0 bg-gradient-to-r from-indigo-50 to-blue-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <span class="relative flex items-center justify-center gap-2 bg-gradient-to-r from-indigo-600 to-blue-600 bg-clip-text text-transparent">
+                            <i class="fas fa-user-graduate"></i>
+                            ابدأ كطالب
+                            <i class="fas fa-arrow-left group-hover:translate-x-1 transition-transform"></i>
+                        </span>
+                    </a>
+                    <a href="company/dashboard.html" class="group px-8 py-4 bg-white/10 backdrop-blur-md text-white border-2 border-white/30 rounded-2xl font-bold text-lg hover:bg-white/20 hover:border-white/50 transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2">
+                        <i class="fas fa-building"></i>
+                        انشر فرصة تدريب
+                    </a>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="flex flex-wrap gap-6 justify-center text-sm animate-fade-in">
+                    <a href="university/dashboard.html" class="flex items-center gap-2 text-white/80 hover:text-white font-semibold transition-colors group">
+                        <i class="fas fa-university group-hover:scale-110 transition-transform"></i>
+                        دخول الجامعة
+                    </a>
+                    <span class="text-white/30">•</span>
+                    <a href="admin/dashboard.html" class="flex items-center gap-2 text-white/80 hover:text-white font-semibold transition-colors group">
+                        <i class="fas fa-cog group-hover:rotate-90 transition-transform"></i>
+                        دخول الإدارة
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Wave Divider -->
+        <div class="absolute bottom-0 left-0 right-0">
+            <svg viewBox="0 0 1440 120" fill="none" class="w-full h-auto">
+                <path d="M0 120L60 105C120 90 240 60 360 45C480 30 600 30 720 37.5C840 45 960 60 1080 67.5C1200 75 1320 75 1380 75L1440 75V120H0Z" fill="rgb(248, 250, 252)"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-16 bg-slate-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center group cursor-pointer">
+                    <div class="mb-4 inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-indigo-100 to-blue-100 rounded-2xl group-hover:scale-110 transition-transform duration-300">
+                        <i class="fas fa-building text-3xl text-indigo-600"></i>
+                    </div>
+                    <div class="text-4xl font-black text-slate-900 mb-2">250+</div>
+                    <div class="text-slate-600 font-semibold">شركة شريكة</div>
+                </div>
+                <div class="text-center group cursor-pointer">
+                    <div class="mb-4 inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-cyan-100 to-blue-100 rounded-2xl group-hover:scale-110 transition-transform duration-300">
+                        <i class="fas fa-user-graduate text-3xl text-cyan-600"></i>
+                    </div>
+                    <div class="text-4xl font-black text-slate-900 mb-2">5000+</div>
+                    <div class="text-slate-600 font-semibold">طالب مسجل</div>
+                </div>
+                <div class="text-center group cursor-pointer">
+                    <div class="mb-4 inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-green-100 to-emerald-100 rounded-2xl group-hover:scale-110 transition-transform duration-300">
+                        <i class="fas fa-briefcase text-3xl text-green-600"></i>
+                    </div>
+                    <div class="text-4xl font-black text-slate-900 mb-2">1200+</div>
+                    <div class="text-slate-600 font-semibold">فرصة تدريب</div>
+                </div>
+                <div class="text-center group cursor-pointer">
+                    <div class="mb-4 inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-purple-100 to-pink-100 rounded-2xl group-hover:scale-110 transition-transform duration-300">
+                        <i class="fas fa-university text-3xl text-purple-600"></i>
+                    </div>
+                    <div class="text-4xl font-black text-slate-900 mb-2">40+</div>
+                    <div class="text-slate-600 font-semibold">جامعة معتمدة</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-24 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <div class="inline-block mb-4">
+                    <span class="px-4 py-2 bg-indigo-100 text-indigo-600 rounded-full text-sm font-bold">
+                        <i class="fas fa-star mr-2"></i>
+                        المميزات
+                    </span>
+                </div>
+                <h2 class="text-4xl lg:text-5xl font-black text-slate-900 mb-4">لماذا ميدانك؟</h2>
+                <p class="text-xl text-slate-600 max-w-2xl mx-auto">منصة متكاملة تجمع كل أطراف التدريب في مكان واحد</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+                <!-- Feature 1 -->
+                <div class="group relative bg-gradient-to-br from-white to-indigo-50/30 rounded-3xl p-8 border-2 border-transparent hover:border-indigo-200 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-indigo-600/5 to-transparent rounded-full -z-10"></div>
+                    <div class="relative w-16 h-16 mb-6">
+                        <div class="absolute inset-0 bg-gradient-to-br from-indigo-600 to-blue-600 rounded-2xl blur opacity-40 group-hover:opacity-60 transition-opacity"></div>
+                        <div class="relative w-full h-full bg-gradient-to-br from-indigo-600 to-blue-600 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                            <i class="fas fa-clipboard-list text-white text-2xl"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-900 mb-3 group-hover:text-indigo-600 transition-colors">تنظيم كامل</h3>
+                    <p class="text-slate-600 leading-relaxed">مسار التدريب من النشر حتى الاعتماد النهائي بشكل منظم وواضح</p>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="group relative bg-gradient-to-br from-white to-cyan-50/30 rounded-3xl p-8 border-2 border-transparent hover:border-cyan-200 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-cyan-600/5 to-transparent rounded-full -z-10"></div>
+                    <div class="relative w-16 h-16 mb-6">
+                        <div class="absolute inset-0 bg-gradient-to-br from-cyan-600 to-blue-600 rounded-2xl blur opacity-40 group-hover:opacity-60 transition-opacity"></div>
+                        <div class="relative w-full h-full bg-gradient-to-br from-cyan-600 to-blue-600 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                            <i class="fas fa-comments text-white text-2xl"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-900 mb-3 group-hover:text-cyan-600 transition-colors">مراسلة مباشرة</h3>
+                    <p class="text-slate-600 leading-relaxed">تواصل داخلي بين الطالب والشركة داخل المنصة</p>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="group relative bg-gradient-to-br from-white to-green-50/30 rounded-3xl p-8 border-2 border-transparent hover:border-green-200 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-green-600/5 to-transparent rounded-full -z-10"></div>
+                    <div class="relative w-16 h-16 mb-6">
+                        <div class="absolute inset-0 bg-gradient-to-br from-green-600 to-emerald-600 rounded-2xl blur opacity-40 group-hover:opacity-60 transition-opacity"></div>
+                        <div class="relative w-full h-full bg-gradient-to-br from-green-600 to-emerald-600 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                            <i class="fas fa-check-circle text-white text-2xl"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-900 mb-3 group-hover:text-green-600 transition-colors">اعتماد جامعي</h3>
+                    <p class="text-slate-600 leading-relaxed">متابعة وتقييم واعتماد رسمي من الجامعة للتدريب الجامعي</p>
+                </div>
+                
+                <!-- Feature 4 -->
+                <div class="group relative bg-gradient-to-br from-white to-purple-50/30 rounded-3xl p-8 border-2 border-transparent hover:border-purple-200 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-purple-600/5 to-transparent rounded-full -z-10"></div>
+                    <div class="relative w-16 h-16 mb-6">
+                        <div class="absolute inset-0 bg-gradient-to-br from-purple-600 to-pink-600 rounded-2xl blur opacity-40 group-hover:opacity-60 transition-opacity"></div>
+                        <div class="relative w-full h-full bg-gradient-to-br from-purple-600 to-pink-600 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                            <i class="fas fa-shield-alt text-white text-2xl"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-900 mb-3 group-hover:text-purple-600 transition-colors">جودة وشفافية</h3>
+                    <p class="text-slate-600 leading-relaxed">إدارة المنصة تعتمد الحسابات وتضمن جودة الفرص</p>
+                </div>
+                
+                <!-- Feature 5 -->
+                <div class="group relative bg-gradient-to-br from-white to-orange-50/30 rounded-3xl p-8 border-2 border-transparent hover:border-orange-200 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-orange-600/5 to-transparent rounded-full -z-10"></div>
+                    <div class="relative w-16 h-16 mb-6">
+                        <div class="absolute inset-0 bg-gradient-to-br from-orange-600 to-red-600 rounded-2xl blur opacity-40 group-hover:opacity-60 transition-opacity"></div>
+                        <div class="relative w-full h-full bg-gradient-to-br from-orange-600 to-red-600 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                            <i class="fas fa-chart-line text-white text-2xl"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-900 mb-3 group-hover:text-orange-600 transition-colors">تقارير ومتابعة</h3>
+                    <p class="text-slate-600 leading-relaxed">رفع التقارير الدورية ومتابعة الأداء بشكل مستمر</p>
+                </div>
+                
+                <!-- Feature 6 -->
+                <div class="group relative bg-gradient-to-br from-white to-yellow-50/30 rounded-3xl p-8 border-2 border-transparent hover:border-yellow-200 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-yellow-600/5 to-transparent rounded-full -z-10"></div>
+                    <div class="relative w-16 h-16 mb-6">
+                        <div class="absolute inset-0 bg-gradient-to-br from-yellow-600 to-amber-600 rounded-2xl blur opacity-40 group-hover:opacity-60 transition-opacity"></div>
+                        <div class="relative w-full h-full bg-gradient-to-br from-yellow-600 to-amber-600 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                            <i class="fas fa-star text-white text-2xl"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-900 mb-3 group-hover:text-yellow-600 transition-colors">تقييم متبادل</h3>
+                    <p class="text-slate-600 leading-relaxed">تقييم الطالب والشركة وجودة التدريب المقدم</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Target Audience Section -->
+    <section id="about" class="py-24 bg-gradient-to-br from-slate-50 to-indigo-50/30">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16">
+                    <div class="inline-block mb-4">
+                        <span class="px-4 py-2 bg-blue-100 text-blue-600 rounded-full text-sm font-bold">
+                            <i class="fas fa-users mr-2"></i>
+                            الفئة المستهدفة
+                        </span>
+                    </div>
+                    <h2 class="text-4xl lg:text-5xl font-black text-slate-900 mb-4">لمن المنصة؟</h2>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-8 mb-12">
+                    <div class="group relative overflow-hidden bg-white rounded-3xl p-10 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                        <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-indigo-600 to-blue-600"></div>
+                        <div class="absolute -top-10 -left-10 w-40 h-40 bg-gradient-to-br from-indigo-100 to-blue-100 rounded-full opacity-50"></div>
+                        <div class="relative">
+                            <div class="w-20 h-20 bg-gradient-to-br from-indigo-600 to-blue-600 rounded-3xl flex items-center justify-center mb-6 shadow-xl group-hover:scale-110 transition-transform">
+                                <i class="fas fa-graduation-cap text-white text-3xl"></i>
+                            </div>
+                            <h3 class="text-3xl font-black text-slate-900 mb-4">طلبة السنة الرابعة وما فوق</h3>
+                            <p class="text-slate-600 text-lg leading-relaxed">احصل على فرصة تدريب معتمدة ضمن خطتك الدراسية واكتسب الخبرة العملية المطلوبة</p>
+                        </div>
+                    </div>
+                    
+                    <div class="group relative overflow-hidden bg-white rounded-3xl p-10 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                        <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-cyan-600 to-blue-600"></div>
+                        <div class="absolute -top-10 -left-10 w-40 h-40 bg-gradient-to-br from-cyan-100 to-blue-100 rounded-full opacity-50"></div>
+                        <div class="relative">
+                            <div class="w-20 h-20 bg-gradient-to-br from-cyan-600 to-blue-600 rounded-3xl flex items-center justify-center mb-6 shadow-xl group-hover:scale-110 transition-transform">
+                                <i class="fas fa-user-tie text-white text-3xl"></i>
+                            </div>
+                            <h3 class="text-3xl font-black text-slate-900 mb-4">الخريجون الجدد</h3>
+                            <p class="text-slate-600 text-lg leading-relaxed">طوّر مهاراتك العملية واكتسب خبرة قيمة في سوق العمل لتعزيز فرصك الوظيفية</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative overflow-hidden bg-gradient-to-br from-blue-600 to-indigo-600 rounded-3xl p-8 lg:p-10 shadow-2xl">
+                    <div class="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-32 translate-x-32"></div>
+                    <div class="absolute bottom-0 left-0 w-64 h-64 bg-white/5 rounded-full translate-y-32 -translate-x-32"></div>
+                    <div class="relative flex flex-col lg:flex-row items-start gap-6">
+                        <div class="flex-shrink-0">
+                            <div class="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center border border-white/30">
+                                <i class="fas fa-info-circle text-white text-3xl"></i>
+                            </div>
+                        </div>
+                        <div class="flex-1 text-white">
+                            <h4 class="text-2xl font-bold mb-3">ملاحظة مهمة</h4>
+                            <p class="text-xl leading-relaxed text-white/90">المنصة ليست لتوفير وظائف مباشرة، بل للتدريب المعتمد وربط الطالب بسوق العمل من خلال برامج تدريبية مهنية واحترافية</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="relative py-24 overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-indigo-600 via-blue-600 to-cyan-600"></div>
+        <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 40px 40px;"></div>
+        
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-4xl mx-auto text-center text-white">
+                <h2 class="text-4xl lg:text-6xl font-black mb-6">جاهز لبدء تدريبك؟</h2>
+                <p class="text-xl lg:text-2xl mb-12 text-white/90 max-w-2xl mx-auto">انضم الآن إلى آلاف الطلاب والشركات وابدأ رحلتك المهنية</p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="student/dashboard.html" class="group relative px-10 py-5 overflow-hidden rounded-2xl font-bold text-xl shadow-2xl transition-all duration-300 hover:scale-105">
+                        <div class="absolute inset-0 bg-white"></div>
+                        <div class="absolute inset-0 bg-gradient-to-r from-indigo-50 to-blue-50 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                        <span class="relative flex items-center justify-center gap-3 bg-gradient-to-r from-indigo-600 to-blue-600 bg-clip-text text-transparent">
+                            <i class="fas fa-user-graduate"></i>
+                            ابدأ كطالب
+                            <i class="fas fa-arrow-left group-hover:translate-x-1 transition-transform"></i>
+                        </span>
+                    </a>
+                    <a href="company/dashboard.html" class="px-10 py-5 bg-white/10 backdrop-blur-md text-white border-2 border-white/30 rounded-2xl font-bold text-xl hover:bg-white/20 hover:border-white/50 transition-all duration-300 hover:scale-105 flex items-center justify-center gap-3">
+                        <i class="fas fa-building"></i>
+                        سجل كشركة
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-12 h-12 bg-gradient-to-br from-indigo-600 to-blue-600 rounded-2xl flex items-center justify-center">
+                            <i class="fas fa-briefcase text-white text-xl"></i>
+                        </div>
+                        <span class="text-3xl font-black">ميدانك</span>
+                    </div>
+                    <p class="text-slate-400 leading-relaxed mb-6">منصة التدريب الجامعي والمهني المعتمد - نربط الطلاب بسوق العمل</p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 bg-slate-800 hover:bg-indigo-600 rounded-xl flex items-center justify-center transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-slate-800 hover:bg-indigo-600 rounded-xl flex items-center justify-center transition-colors">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-slate-800 hover:bg-indigo-600 rounded-xl flex items-center justify-center transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-xl mb-6">روابط سريعة</h4>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="#features" class="text-slate-400 hover:text-white transition-colors flex items-center gap-2 group">
+                                <i class="fas fa-chevron-left text-xs group-hover:translate-x-1 transition-transform"></i>
+                                المميزات
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#workflow" class="text-slate-400 hover:text-white transition-colors flex items-center gap-2 group">
+                                <i class="fas fa-chevron-left text-xs group-hover:translate-x-1 transition-transform"></i>
+                                كيف تعمل
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#training-types" class="text-slate-400 hover:text-white transition-colors flex items-center gap-2 group">
+                                <i class="fas fa-chevron-left text-xs group-hover:translate-x-1 transition-transform"></i>
+                                أنواع التدريب
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-xl mb-6">للمستخدمين</h4>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="student/dashboard.html" class="text-slate-400 hover:text-white transition-colors flex items-center gap-2">
+                                <i class="fas fa-user-graduate"></i>
+                                دخول الطلاب
+                            </a>
+                        </li>
+                        <li>
+                            <a href="company/dashboard.html" class="text-slate-400 hover:text-white transition-colors flex items-center gap-2">
+                                <i class="fas fa-building"></i>
+                                دخول الشركات
+                            </a>
+                        </li>
+                        <li>
+                            <a href="university/dashboard.html" class="text-slate-400 hover:text-white transition-colors flex items-center gap-2">
+                                <i class="fas fa-university"></i>
+                                دخول الجامعات
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-xl mb-6">تواصل معنا</h4>
+                    <ul class="space-y-4 text-slate-400">
+                        <li class="flex items-center gap-3">
+                            <div class="w-10 h-10 bg-slate-800 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <span>info@midanok.com</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <div class="w-10 h-10 bg-slate-800 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <span>+966 XX XXX XXXX</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <div class="w-10 h-10 bg-slate-800 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <span>الرياض، المملكة العربية السعودية</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-slate-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-slate-400">
+                    <p>&copy; 2026 ميدانك. جميع الحقوق محفوظة.</p>
+                    <div class="flex gap-6 text-sm">
+                        <a href="#" class="hover:text-white transition-colors">سياسة الخصوصية</a>
+                        <a href="#" class="hover:text-white transition-colors">الشروط والأحكام</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
