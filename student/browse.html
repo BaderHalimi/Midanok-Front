@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فرص التدريب | ميدانك</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Cairo', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans antialiased bg-gradient-to-br from-slate-50 via-white to-indigo-50">
+    
+    <div class="flex min-h-screen">
+        <!-- Sidebar (Same as Dashboard) -->
+        <aside class="hidden lg:flex flex-col w-72 bg-white border-l border-slate-200 shadow-xl fixed right-0 top-0 h-screen overflow-y-auto">
+            <div class="p-6 border-b border-slate-200">
+                <a href="../index.html" class="flex items-center gap-3 group">
+                    <div class="relative">
+                        <div class="absolute inset-0 bg-gradient-to-r from-indigo-600 to-blue-600 rounded-2xl blur opacity-75 group-hover:opacity-100 transition duration-300"></div>
+                        <div class="relative w-12 h-12 bg-gradient-to-br from-indigo-600 to-blue-600 rounded-2xl flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform duration-300">
+                            <i class="fas fa-briefcase text-white text-xl"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <span class="block text-2xl font-black bg-gradient-to-r from-indigo-600 to-blue-600 bg-clip-text text-transparent">ميدانك</span>
+                        <span class="block text-xs text-slate-500 font-semibold">لوحة الطالب</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="p-6 bg-gradient-to-br from-indigo-50 to-blue-50 border-b border-slate-200">
+                <div class="flex items-center gap-3">
+                    <div class="w-14 h-14 bg-gradient-to-br from-indigo-600 to-blue-600 rounded-2xl flex items-center justify-center shadow-lg">
+                        <span class="text-white text-xl font-bold">أم</span>
+                    </div>
+                    <div class="flex-1 min-w-0">
+                        <h3 class="font-bold text-slate-900 truncate">أحمد محمد</h3>
+                        <p class="text-sm text-slate-600">علوم حاسوب</p>
+                    </div>
+                </div>
+            </div>
+
+            <nav class="flex-1 p-4 space-y-1">
+                <a href="dashboard.html" class="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-50 rounded-xl font-semibold transition-all group hover:text-indigo-600">
+                    <i class="fas fa-home text-lg group-hover:scale-110 transition-transform"></i>
+                    <span>لوحة التحكم</span>
+                </a>
+                <a href="profile.html" class="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-50 rounded-xl font-semibold transition-all group hover:text-indigo-600">
+                    <i class="fas fa-user text-lg group-hover:scale-110 transition-transform"></i>
+                    <span>الملف المهني</span>
+                </a>
+                <a href="browse.html" class="flex items-center gap-3 px-4 py-3 bg-gradient-to-r from-indigo-600 to-blue-600 text-white rounded-xl shadow-lg font-semibold group">
+                    <i class="fas fa-search text-lg"></i>
+                    <span>فرص التدريب</span>
+                </a>
+                <a href="applications.html" class="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-50 rounded-xl font-semibold transition-all group hover:text-indigo-600">
+                    <i class="fas fa-file-alt text-lg group-hover:scale-110 transition-transform"></i>
+                    <span>طلباتي</span>
+                </a>
+                <a href="reports.html" class="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-50 rounded-xl font-semibold transition-all group hover:text-indigo-600">
+                    <i class="fas fa-chart-bar text-lg group-hover:scale-110 transition-transform"></i>
+                    <span>التقارير</span>
+                </a>
+                <a href="messages.html" class="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-50 rounded-xl font-semibold transition-all group hover:text-indigo-600">
+                    <i class="fas fa-comments text-lg group-hover:scale-110 transition-transform"></i>
+                    <span>الرسائل</span>
+                    <span class="mr-auto px-2 py-1 bg-red-500 text-white text-xs rounded-full">3</span>
+                </a>
+                <a href="evaluations.html" class="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-50 rounded-xl font-semibold transition-all group hover:text-indigo-600">
+                    <i class="fas fa-star text-lg group-hover:scale-110 transition-transform"></i>
+                    <span>التقييمات</span>
+                </a>
+            </nav>
+
+            <div class="p-4 border-t border-slate-200">
+                <a href="../index.html" class="flex items-center gap-3 px-4 py-3 text-red-600 hover:bg-red-50 rounded-xl font-semibold transition-all group">
+                    <i class="fas fa-sign-out-alt text-lg group-hover:scale-110 transition-transform"></i>
+                    <span>تسجيل الخروج</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 lg:mr-72">
+            <!-- Top Bar -->
+            <div class="sticky top-0 z-40 bg-white/80 backdrop-blur-xl border-b border-slate-200 shadow-sm">
+                <div class="px-4 sm:px-6 lg:px-8 py-4">
+                    <div class="flex items-center justify-between">
+                        <button class="lg:hidden p-2 text-slate-600 hover:text-indigo-600 hover:bg-slate-100 rounded-xl transition-all">
+                            <i class="fas fa-bars text-2xl"></i>
+                        </button>
+                        <div class="flex-1 max-w-2xl mx-4">
+                            <div class="relative">
+                                <i class="fas fa-search absolute right-4 top-1/2 -translate-y-1/2 text-slate-400"></i>
+                                <input type="text" placeholder="ابحث عن فرص تدريب..." class="w-full pr-12 pl-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all">
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <button class="relative p-2 text-slate-600 hover:text-indigo-600 hover:bg-slate-100 rounded-xl transition-all">
+                                <i class="fas fa-bell text-xl"></i>
+                                <span class="absolute top-0 left-0 w-2 h-2 bg-red-500 rounded-full"></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Page Content -->
+            <div class="p-4 sm:p-6 lg:p-8">
+                <!-- Header -->
+                <div class="mb-8">
+                    <h1 class="text-3xl lg:text-4xl font-black text-slate-900 mb-2">فرص التدريب المتاحة</h1>
+                    <p class="text-lg text-slate-600">اكتشف الفرص المناسبة لتخصصك وقدّم طلبك</p>
+                </div>
+
+                <!-- Filters -->
+                <div class="bg-white rounded-2xl p-6 shadow-lg border border-slate-200 mb-8">
+                    <h2 class="text-xl font-bold text-slate-900 mb-6 flex items-center gap-2">
+                        <i class="fas fa-filter text-indigo-600"></i>
+                        فلترة النتائج
+                    </h2>
+                    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                        <div>
+                            <label class="block text-sm font-bold text-slate-700 mb-2">التخصص</label>
+                            <select class="w-full px-4 py-3 bg-slate-50 border-2 border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all">
+                                <option>جميع التخصصات</option>
+                                <option selected>علوم الحاسوب</option>
+                                <option>هندسة البرمجيات</option>
+                                <option>تقنية المعلومات</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-slate-700 mb-2">نوع التدريب</label>
+                            <select class="w-full px-4 py-3 bg-slate-50 border-2 border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all">
+                                <option>جميع الأنواع</option>
+                                <option>تدريب جامعي</option>
+                                <option>تدريب مهني</option>
+                                <option>منتهي بتوظيف</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-slate-700 mb-2">المدينة</label>
+                            <select class="w-full px-4 py-3 bg-slate-50 border-2 border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all">
+                                <option>جميع المدن</option>
+                                <option>الرياض</option>
+                                <option>جدة</option>
+                                <option>الدمام</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-slate-700 mb-2">عدد الساعات</label>
+                            <select class="w-full px-4 py-3 bg-slate-50 border-2 border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all">
+                                <option>الكل</option>
+                                <option>90 ساعة</option>
+                                <option>120 ساعة</option>
+                                <option>180 ساعة</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="flex gap-3 mt-6">
+                        <button class="px-6 py-3 bg-gradient-to-r from-indigo-600 to-blue-600 text-white rounded-xl font-bold shadow-lg hover:shadow-xl transition-all hover:scale-105">
+                            <i class="fas fa-check ml-2"></i>
+                            تطبيق الفلاتر
+                        </button>
+                        <button class="px-6 py-3 bg-white border-2 border-slate-300 text-slate-700 rounded-xl font-bold hover:bg-slate-50 transition-all">
+                            <i class="fas fa-redo ml-2"></i>
+                            إعادة تعيين
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Results Count -->
+                <div class="flex items-center justify-between mb-6">
+                    <p class="text-slate-600 font-semibold">
+                        <span class="text-2xl font-black text-indigo-600">45</span>
+                        فرصة تدريب متاحة
+                    </p>
+                    <div class="flex gap-2">
+                        <button class="p-2 text-slate-600 hover:text-indigo-600 hover:bg-slate-100 rounded-lg transition-all">
+                            <i class="fas fa-th text-xl"></i>
+                        </button>
+                        <button class="p-2 text-indigo-600 bg-indigo-50 rounded-lg">
+                            <i class="fas fa-list text-xl"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Opportunities List -->
+                <div class="space-y-6">
+                    <!-- Opportunity Card 1 -->
+                    <div class="group bg-white rounded-2xl shadow-lg border-2 border-transparent hover:border-indigo-300 hover:shadow-2xl transition-all duration-300 overflow-hidden">
+                        <div class="relative p-6">
+                            <div class="absolute top-0 left-0 w-2 h-full bg-gradient-to-b from-indigo-600 to-blue-600"></div>
+                            <div class="flex flex-col lg:flex-row gap-6">
+                                <div class="flex-shrink-0">
+                                    <div class="w-24 h-24 bg-gradient-to-br from-indigo-100 to-blue-100 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                                        <i class="fas fa-code text-4xl text-indigo-600"></i>
+                                    </div>
+                                </div>
+                                <div class="flex-1 min-w-0">
+                                    <div class="flex items-start justify-between gap-4 mb-4">
+                                        <div>
+                                            <h3 class="text-2xl font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors">تدريب تطوير تطبيقات الويب</h3>
+                                            <p class="text-lg text-slate-600 font-semibold mb-3">شركة التقنية المتقدمة</p>
+                                            <div class="flex flex-wrap gap-3 text-sm mb-4">
+                                                <span class="flex items-center gap-2 px-3 py-1 bg-indigo-50 text-indigo-700 rounded-full font-semibold">
+                                                    <i class="fas fa-map-marker-alt"></i>
+                                                    الرياض
+                                                </span>
+                                                <span class="flex items-center gap-2 px-3 py-1 bg-blue-50 text-blue-700 rounded-full font-semibold">
+                                                    <i class="fas fa-clock"></i>
+                                                    120 ساعة
+                                                </span>
+                                                <span class="flex items-center gap-2 px-3 py-1 bg-purple-50 text-purple-700 rounded-full font-semibold">
+                                                    <i class="fas fa-graduation-cap"></i>
+                                                    تدريب جامعي
+                                                </span>
+                                                <span class="flex items-center gap-2 px-3 py-1 bg-green-50 text-green-700 rounded-full font-semibold">
+                                                    <i class="fas fa-users"></i>
+                                                    5 مقاعد متاحة
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="flex flex-col gap-2 items-end flex-shrink-0">
+                                            <span class="px-4 py-2 bg-gradient-to-r from-green-100 to-emerald-100 text-green-700 text-sm font-bold rounded-full">معتمد</span>
+                                            <span class="text-sm text-slate-500">نُشر في: 15 يناير</span>
+                                        </div>
+                                    </div>
+                                    <p class="text-slate-600 mb-4 leading-relaxed">تدريب شامل على تطوير تطبيقات الويب الحديثة باستخدام React.js و Node.js. سيتعلم المتدرب بناء تطبيقات كاملة من الصفر مع التركيز على أفضل الممارسات والمعايير الحديثة.</p>
+                                    <div class="mb-4">
+                                        <p class="text-sm font-bold text-slate-700 mb-2">المهارات المطلوبة:</p>
+                                        <div class="flex flex-wrap gap-2">
+                                            <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-lg text-sm font-semibold">JavaScript</span>
+                                            <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-lg text-sm font-semibold">React</span>
+                                            <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-lg text-sm font-semibold">Node.js</span>
+                                            <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-lg text-sm font-semibold">Git</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-wrap gap-3">
+                                        <button class="px-6 py-3 bg-gradient-to-r from-indigo-600 to-blue-600 text-white rounded-xl font-bold shadow-lg hover:shadow-xl transition-all hover:scale-105">
+                                            <i class="fas fa-eye ml-2"></i>
+                                            عرض التفاصيل
+                                        </button>
+                                        <button class="px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-600 text-white rounded-xl font-bold shadow-lg hover:shadow-xl transition-all hover:scale-105">
+                                            <i class="fas fa-paper-plane ml-2"></i>
+                                            تقديم الآن
+                                        </button>
+                                        <button class="px-4 py-3 bg-white border-2 border-slate-300 text-slate-700 rounded-xl hover:bg-slate-50 transition-all">
+                                            <i class="fas fa-heart"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- More opportunities... (similar structure) -->
+                    <!-- You can duplicate the above card with different colors and content -->
+                </div>
+
+                <!-- Pagination -->
+                <div class="mt-12 flex justify-center items-center gap-2">
+                    <button class="px-4 py-2 bg-white border-2 border-slate-300 text-slate-700 rounded-xl font-bold hover:bg-slate-50 transition-all">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                    <button class="px-5 py-2 bg-gradient-to-r from-indigo-600 to-blue-600 text-white rounded-xl font-bold shadow-lg">1</button>
+                    <button class="px-5 py-2 bg-white border-2 border-slate-300 text-slate-700 rounded-xl font-bold hover:bg-slate-50 transition-all">2</button>
+                    <button class="px-5 py-2 bg-white border-2 border-slate-300 text-slate-700 rounded-xl font-bold hover:bg-slate-50 transition-all">3</button>
+                    <button class="px-4 py-2 bg-white border-2 border-slate-300 text-slate-700 rounded-xl font-bold hover:bg-slate-50 transition-all">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>
