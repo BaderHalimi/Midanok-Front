@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>طلبات الموافقة | ميدانك</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="font-sans antialiased bg-gradient-to-br from-slate-50 via-white to-green-50">
+    <div class="flex min-h-screen">
+        <aside class="hidden lg:flex flex-col w-72 bg-white border-l border-slate-200 shadow-xl fixed right-0 top-0 h-screen overflow-y-auto">
+            <div class="p-6 border-b border-slate-200">
+                <a href="../index.html" class="flex items-center gap-3">
+                    <div class="w-12 h-12 bg-gradient-to-br from-green-600 to-emerald-600 rounded-2xl flex items-center justify-center shadow-lg">
+                        <i class="fas fa-university text-white text-xl"></i>
+                    </div>
+                    <span class="text-2xl font-black bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">ميدانك</span>
+                </a>
+            </div>
+
+            <nav class="flex-1 p-4 space-y-1">
+                <a href="dashboard.html" class="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-50 rounded-xl font-semibold transition-all">
+                    <i class="fas fa-home text-lg"></i>
+                    <span>لوحة التحكم</span>
+                </a>
+                <a href="students.html" class="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-50 rounded-xl font-semibold transition-all">
+                    <i class="fas fa-user-graduate text-lg"></i>
+                    <span>الطلاب</span>
+                </a>
+                <a href="approvals.html" class="flex items-center gap-3 px-4 py-3 bg-gradient-to-r from-green-600 to-emerald-600 text-white rounded-xl shadow-lg font-semibold">
+                    <i class="fas fa-check-circle text-lg"></i>
+                    <span>طلبات الموافقة</span>
+                    <span class="mr-auto bg-white text-green-600 px-2 py-1 rounded-full text-xs font-black">8</span>
+                </a>
+                <a href="supervision.html" class="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-50 rounded-xl font-semibold transition-all">
+                    <i class="fas fa-clipboard-check text-lg"></i>
+                    <span>الإشراف</span>
+                </a>
+                <a href="reports.html" class="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-50 rounded-xl font-semibold transition-all">
+                    <i class="fas fa-file-alt text-lg"></i>
+                    <span>التقارير</span>
+                </a>
+                <a href="evaluations.html" class="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-50 rounded-xl font-semibold transition-all">
+                    <i class="fas fa-star text-lg"></i>
+                    <span>التقييمات</span>
+                </a>
+                <a href="records.html" class="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-50 rounded-xl font-semibold transition-all">
+                    <i class="fas fa-folder text-lg"></i>
+                    <span>السجلات</span>
+                </a>
+            </nav>
+        </aside>
+
+        <main class="flex-1 lg:mr-72">
+            <div class="p-4 sm:p-6 lg:p-8">
+                <div class="mb-8 bg-gradient-to-br from-green-600 to-emerald-600 rounded-3xl p-8 text-white shadow-2xl">
+                    <h1 class="text-3xl lg:text-4xl font-black mb-3">طلبات الموافقة على التدريب</h1>
+                    <p class="text-xl text-white/90">مراجعة والموافقة على طلبات الطلاب</p>
+                </div>
+
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+                    <div class="bg-white rounded-2xl p-6 border-2 border-yellow-200 shadow-lg">
+                        <div class="w-14 h-14 bg-gradient-to-br from-yellow-600 to-orange-600 rounded-2xl flex items-center justify-center mb-4">
+                            <i class="fas fa-clock text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-3xl font-black text-slate-900 mb-1">8</h3>
+                        <p class="text-sm font-semibold text-slate-500">قيد الانتظار</p>
+                    </div>
+
+                    <div class="bg-white rounded-2xl p-6 border-2 border-green-200 shadow-lg">
+                        <div class="w-14 h-14 bg-gradient-to-br from-green-600 to-emerald-600 rounded-2xl flex items-center justify-center mb-4">
+                            <i class="fas fa-check-circle text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-3xl font-black text-slate-900 mb-1">156</h3>
+                        <p class="text-sm font-semibold text-slate-500">موافق عليها</p>
+                    </div>
+
+                    <div class="bg-white rounded-2xl p-6 border-2 border-red-200 shadow-lg">
+                        <div class="w-14 h-14 bg-gradient-to-br from-red-600 to-pink-600 rounded-2xl flex items-center justify-center mb-4">
+                            <i class="fas fa-times-circle text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-3xl font-black text-slate-900 mb-1">12</h3>
+                        <p class="text-sm font-semibold text-slate-500">مرفوضة</p>
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    <div class="bg-white rounded-2xl shadow-lg border-r-4 border-yellow-500 p-6">
+                        <div class="flex items-start justify-between mb-4">
+                            <div class="flex gap-4 flex-1">
+                                <div class="w-20 h-20 bg-gradient-to-br from-indigo-600 to-blue-600 rounded-2xl flex items-center justify-center">
+                                    <i class="fas fa-user text-white text-3xl"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <h3 class="text-xl font-black text-slate-900 mb-2">أحمد محمد العلي</h3>
+                                    <div class="grid grid-cols-2 gap-3 mb-3">
+                                        <div>
+                                            <p class="text-xs text-slate-500 font-semibold">الرقم الجامعي</p>
+                                            <p class="text-sm font-black text-slate-700">43912345</p>
+                                        </div>
+                                        <div>
+                                            <p class="text-xs text-slate-500 font-semibold">التخصص</p>
+                                            <p class="text-sm font-black text-slate-700">علوم الحاسب</p>
+                                        </div>
+                                        <div>
+                                            <p class="text-xs text-slate-500 font-semibold">المعدل</p>
+                                            <p class="text-sm font-black text-slate-700">4.2 / 5</p>
+                                        </div>
+                                        <div>
+                                            <p class="text-xs text-slate-500 font-semibold">المستوى</p>
+                                            <p class="text-sm font-black text-slate-700">السابع</p>
+                                        </div>
+                                    </div>
+                                    <div class="bg-slate-50 rounded-xl p-4 mb-3">
+                                        <p class="text-sm font-bold text-slate-700 mb-1">جهة التدريب:</p>
+                                        <p class="text-lg font-black text-green-600">شركة التقنية المتقدمة</p>
+                                        <p class="text-sm text-slate-600 mt-1">تدريب تطوير تطبيقات الويب - 120 ساعة</p>
+                                    </div>
+                                    <span class="px-4 py-2 bg-yellow-100 text-yellow-700 rounded-xl text-sm font-bold">
+                                        <i class="fas fa-clock ml-1"></i>
+                                        قيد المراجعة - منذ يومين
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex gap-3 pt-4 border-t border-slate-200">
+                            <button class="flex-1 px-6 py-3 bg-green-600 text-white rounded-xl font-bold shadow-lg hover:bg-green-700">
+                                <i class="fas fa-check ml-2"></i>
+                                الموافقة
+                            </button>
+                            <button class="flex-1 px-6 py-3 bg-red-600 text-white rounded-xl font-bold shadow-lg hover:bg-red-700">
+                                <i class="fas fa-times ml-2"></i>
+                                الرفض
+                            </button>
+                            <button class="px-6 py-3 bg-blue-600 text-white rounded-xl font-bold shadow-lg hover:bg-blue-700">
+                                <i class="fas fa-eye ml-2"></i>
+                                التفاصيل
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl shadow-lg border-r-4 border-yellow-500 p-6">
+                        <div class="flex items-start justify-between mb-4">
+                            <div class="flex gap-4 flex-1">
+                                <div class="w-20 h-20 bg-gradient-to-br from-purple-600 to-pink-600 rounded-2xl flex items-center justify-center">
+                                    <i class="fas fa-user text-white text-3xl"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <h3 class="text-xl font-black text-slate-900 mb-2">سارة خالد المطيري</h3>
+                                    <div class="grid grid-cols-2 gap-3 mb-3">
+                                        <div>
+                                            <p class="text-xs text-slate-500 font-semibold">الرقم الجامعي</p>
+                                            <p class="text-sm font-black text-slate-700">43812346</p>
+                                        </div>
+                                        <div>
+                                            <p class="text-xs text-slate-500 font-semibold">التخصص</p>
+                                            <p class="text-sm font-black text-slate-700">هندسة البرمجيات</p>
+                                        </div>
+                                        <div>
+                                            <p class="text-xs text-slate-500 font-semibold">المعدل</p>
+                                            <p class="text-sm font-black text-slate-700">4.5 / 5</p>
+                                        </div>
+                                        <div>
+                                            <p class="text-xs text-slate-500 font-semibold">المستوى</p>
+                                            <p class="text-sm font-black text-slate-700">الثامن</p>
+                                        </div>
+                                    </div>
+                                    <div class="bg-slate-50 rounded-xl p-4 mb-3">
+                                        <p class="text-sm font-bold text-slate-700 mb-1">جهة التدريب:</p>
+                                        <p class="text-lg font-black text-green-600">مايكروسوفت العربية</p>
+                                        <p class="text-sm text-slate-600 mt-1">تدريب أمن المعلومات - 180 ساعة</p>
+                                    </div>
+                                    <span class="px-4 py-2 bg-yellow-100 text-yellow-700 rounded-xl text-sm font-bold">
+                                        <i class="fas fa-clock ml-1"></i>
+                                        قيد المراجعة - منذ 3 أيام
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex gap-3 pt-4 border-t border-slate-200">
+                            <button class="flex-1 px-6 py-3 bg-green-600 text-white rounded-xl font-bold shadow-lg hover:bg-green-700">
+                                <i class="fas fa-check ml-2"></i>
+                                الموافقة
+                            </button>
+                            <button class="flex-1 px-6 py-3 bg-red-600 text-white rounded-xl font-bold shadow-lg hover:bg-red-700">
+                                <i class="fas fa-times ml-2"></i>
+                                الرفض
+                            </button>
+                            <button class="px-6 py-3 bg-blue-600 text-white rounded-xl font-bold shadow-lg hover:bg-blue-700">
+                                <i class="fas fa-eye ml-2"></i>
+                                التفاصيل
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
