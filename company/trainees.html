@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المتدربون | ميدانك</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="font-sans antialiased bg-gradient-to-br from-slate-50 via-white to-purple-50">
+    <div class="flex min-h-screen">
+        <aside class="hidden lg:flex flex-col w-72 bg-white border-l border-slate-200 shadow-xl fixed right-0 top-0 h-screen overflow-y-auto">
+            <div class="p-6 border-b border-slate-200">
+                <a href="../index.html" class="flex items-center gap-3">
+                    <div class="w-12 h-12 bg-gradient-to-br from-purple-600 to-pink-600 rounded-2xl flex items-center justify-center shadow-lg">
+                        <i class="fas fa-briefcase text-white text-xl"></i>
+                    </div>
+                    <span class="text-2xl font-black bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">ميدانك</span>
+                </a>
+            </div>
+
+            <nav class="flex-1 p-4 space-y-1">
+                <a href="dashboard.html" class="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-50 rounded-xl font-semibold transition-all">
+                    <i class="fas fa-home text-lg"></i>
+                    <span>لوحة التحكم</span>
+                </a>
+                <a href="profile.html" class="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-50 rounded-xl font-semibold transition-all">
+                    <i class="fas fa-building text-lg"></i>
+                    <span>ملف الشركة</span>
+                </a>
+                <a href="post-opportunity.html" class="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-50 rounded-xl font-semibold transition-all">
+                    <i class="fas fa-plus-circle text-lg"></i>
+                    <span>نشر فرصة تدريب</span>
+                </a>
+                <a href="opportunities.html" class="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-50 rounded-xl font-semibold transition-all">
+                    <i class="fas fa-briefcase text-lg"></i>
+                    <span>فرص التدريب</span>
+                </a>
+                <a href="applications.html" class="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-50 rounded-xl font-semibold transition-all">
+                    <i class="fas fa-file-alt text-lg"></i>
+                    <span>الطلبات الواردة</span>
+                </a>
+                <a href="trainees.html" class="flex items-center gap-3 px-4 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl shadow-lg font-semibold">
+                    <i class="fas fa-users text-lg"></i>
+                    <span>المتدربون</span>
+                </a>
+                <a href="messages.html" class="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-50 rounded-xl font-semibold transition-all">
+                    <i class="fas fa-comments text-lg"></i>
+                    <span>الرسائل</span>
+                </a>
+                <a href="evaluations.html" class="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-50 rounded-xl font-semibold transition-all">
+                    <i class="fas fa-star text-lg"></i>
+                    <span>التقييمات</span>
+                </a>
+            </nav>
+        </aside>
+
+        <main class="flex-1 lg:mr-72">
+            <div class="p-4 sm:p-6 lg:p-8">
+                <div class="mb-8 bg-gradient-to-br from-purple-600 to-pink-600 rounded-3xl p-8 text-white shadow-2xl">
+                    <h1 class="text-3xl lg:text-4xl font-black mb-3">المتدربون الحاليون</h1>
+                    <p class="text-xl text-white/90">متابعة وإدارة المتدربين النشطين</p>
+                </div>
+
+                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                    <div class="bg-white rounded-2xl p-6 border-2 border-purple-200 shadow-lg">
+                        <div class="w-14 h-14 bg-gradient-to-br from-purple-600 to-pink-600 rounded-2xl flex items-center justify-center mb-4">
+                            <i class="fas fa-users text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-3xl font-black text-slate-900 mb-1">24</h3>
+                        <p class="text-sm font-semibold text-slate-500">متدربون نشطون</p>
+                    </div>
+
+                    <div class="bg-white rounded-2xl p-6 border-2 border-blue-200 shadow-lg">
+                        <div class="w-14 h-14 bg-gradient-to-br from-blue-600 to-cyan-600 rounded-2xl flex items-center justify-center mb-4">
+                            <i class="fas fa-clock text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-3xl font-black text-slate-900 mb-1">85%</h3>
+                        <p class="text-sm font-semibold text-slate-500">متوسط الإنجاز</p>
+                    </div>
+
+                    <div class="bg-white rounded-2xl p-6 border-2 border-green-200 shadow-lg">
+                        <div class="w-14 h-14 bg-gradient-to-br from-green-600 to-emerald-600 rounded-2xl flex items-center justify-center mb-4">
+                            <i class="fas fa-check-circle text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-3xl font-black text-slate-900 mb-1">56</h3>
+                        <p class="text-sm font-semibold text-slate-500">مكتملون</p>
+                    </div>
+
+                    <div class="bg-white rounded-2xl p-6 border-2 border-yellow-200 shadow-lg">
+                        <div class="w-14 h-14 bg-gradient-to-br from-yellow-600 to-orange-600 rounded-2xl flex items-center justify-center mb-4">
+                            <i class="fas fa-file-alt text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-3xl font-black text-slate-900 mb-1">8</h3>
+                        <p class="text-sm font-semibold text-slate-500">تقارير معلقة</p>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-white rounded-2xl shadow-lg border-2 border-slate-200 p-6 hover:shadow-xl transition-all">
+                        <div class="flex items-start gap-4 mb-4">
+                            <div class="w-16 h-16 bg-gradient-to-br from-indigo-600 to-blue-600 rounded-2xl flex items-center justify-center">
+                                <i class="fas fa-user text-white text-2xl"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-lg font-black text-slate-900 mb-1">أحمد محمد العلي</h3>
+                                <p class="text-sm text-slate-600 mb-2">جامعة الملك سعود</p>
+                                <span class="px-3 py-1 bg-green-100 text-green-700 rounded-lg text-xs font-bold">نشط</span>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <div class="flex justify-between text-sm mb-2">
+                                <span class="font-bold text-slate-700">نسبة الإنجاز</span>
+                                <span class="font-black text-purple-600">75%</span>
+                            </div>
+                            <div class="w-full bg-slate-200 rounded-full h-3">
+                                <div class="bg-gradient-to-r from-purple-600 to-pink-600 h-3 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="flex gap-2">
+                            <button class="flex-1 px-4 py-2 bg-purple-600 text-white rounded-lg font-bold hover:bg-purple-700">
+                                <i class="fas fa-eye ml-2"></i>
+                                التفاصيل
+                            </button>
+                            <button class="px-4 py-2 bg-slate-100 text-slate-600 rounded-lg font-bold hover:bg-slate-200">
+                                <i class="fas fa-comment"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl shadow-lg border-2 border-slate-200 p-6 hover:shadow-xl transition-all">
+                        <div class="flex items-start gap-4 mb-4">
+                            <div class="w-16 h-16 bg-gradient-to-br from-purple-600 to-pink-600 rounded-2xl flex items-center justify-center">
+                                <i class="fas fa-user text-white text-2xl"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-lg font-black text-slate-900 mb-1">سارة خالد المطيري</h3>
+                                <p class="text-sm text-slate-600 mb-2">جامعة الملك عبدالعزيز</p>
+                                <span class="px-3 py-1 bg-green-100 text-green-700 rounded-lg text-xs font-bold">نشط</span>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <div class="flex justify-between text-sm mb-2">
+                                <span class="font-bold text-slate-700">نسبة الإنجاز</span>
+                                <span class="font-black text-purple-600">92%</span>
+                            </div>
+                            <div class="w-full bg-slate-200 rounded-full h-3">
+                                <div class="bg-gradient-to-r from-purple-600 to-pink-600 h-3 rounded-full" style="width: 92%"></div>
+                            </div>
+                        </div>
+                        <div class="flex gap-2">
+                            <button class="flex-1 px-4 py-2 bg-purple-600 text-white rounded-lg font-bold hover:bg-purple-700">
+                                <i class="fas fa-eye ml-2"></i>
+                                التفاصيل
+                            </button>
+                            <button class="px-4 py-2 bg-slate-100 text-slate-600 rounded-lg font-bold hover:bg-slate-200">
+                                <i class="fas fa-comment"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl shadow-lg border-2 border-slate-200 p-6 hover:shadow-xl transition-all">
+                        <div class="flex items-start gap-4 mb-4">
+                            <div class="w-16 h-16 bg-gradient-to-br from-blue-600 to-cyan-600 rounded-2xl flex items-center justify-center">
+                                <i class="fas fa-user text-white text-2xl"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-lg font-black text-slate-900 mb-1">محمد عبدالله السعيد</h3>
+                                <p class="text-sm text-slate-600 mb-2">جامعة الأميرة نورة</p>
+                                <span class="px-3 py-1 bg-green-100 text-green-700 rounded-lg text-xs font-bold">نشط</span>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <div class="flex justify-between text-sm mb-2">
+                                <span class="font-bold text-slate-700">نسبة الإنجاز</span>
+                                <span class="font-black text-purple-600">68%</span>
+                            </div>
+                            <div class="w-full bg-slate-200 rounded-full h-3">
+                                <div class="bg-gradient-to-r from-purple-600 to-pink-600 h-3 rounded-full" style="width: 68%"></div>
+                            </div>
+                        </div>
+                        <div class="flex gap-2">
+                            <button class="flex-1 px-4 py-2 bg-purple-600 text-white rounded-lg font-bold hover:bg-purple-700">
+                                <i class="fas fa-eye ml-2"></i>
+                                التفاصيل
+                            </button>
+                            <button class="px-4 py-2 bg-slate-100 text-slate-600 rounded-lg font-bold hover:bg-slate-200">
+                                <i class="fas fa-comment"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
