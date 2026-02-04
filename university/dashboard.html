@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة التحكم - الجامعة | ميدانك</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Cairo', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans antialiased bg-gradient-to-br from-slate-50 via-white to-green-50">
+    
+    <div class="flex min-h-screen">
+        <!-- Sidebar -->
+        <aside class="hidden lg:flex flex-col w-72 bg-white border-l border-slate-200 shadow-xl fixed right-0 top-0 h-screen overflow-y-auto">
+            <div class="p-6 border-b border-slate-200">
+                <a href="../index.html" class="flex items-center gap-3 group">
+                    <div class="relative">
+                        <div class="absolute inset-0 bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl blur opacity-75 group-hover:opacity-100 transition duration-300"></div>
+                        <div class="relative w-12 h-12 bg-gradient-to-br from-green-600 to-emerald-600 rounded-2xl flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform duration-300">
+                            <i class="fas fa-university text-white text-xl"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <span class="block text-2xl font-black bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">ميدانك</span>
+                        <span class="block text-xs text-slate-500 font-semibold">لوحة الجامعة</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="p-6 bg-gradient-to-br from-green-50 to-emerald-50 border-b border-slate-200">
+                <div class="flex items-center gap-3">
+                    <div class="w-14 h-14 bg-gradient-to-br from-green-600 to-emerald-600 rounded-2xl flex items-center justify-center shadow-lg">
+                        <i class="fas fa-university text-white text-xl"></i>
+                    </div>
+                    <div class="flex-1 min-w-0">
+                        <h3 class="font-bold text-slate-900 truncate">جامعة الملك سعود</h3>
+                        <p class="text-sm text-slate-600">معتمدة</p>
+                    </div>
+                </div>
+            </div>
+
+            <nav class="flex-1 p-4 space-y-1">
+                <a href="dashboard.html" class="flex items-center gap-3 px-4 py-3 bg-gradient-to-r from-green-600 to-emerald-600 text-white rounded-xl shadow-lg font-semibold">
+                    <i class="fas fa-home text-lg"></i>
+                    <span>لوحة التحكم</span>
+                </a>
+                <a href="students.html" class="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-50 rounded-xl font-semibold transition-all group hover:text-green-600">
+                    <i class="fas fa-user-graduate text-lg group-hover:scale-110 transition-transform"></i>
+                    <span>الطلاب</span>
+                </a>
+                <a href="approvals.html" class="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-50 rounded-xl font-semibold transition-all group hover:text-green-600">
+                    <i class="fas fa-check-circle text-lg group-hover:scale-110 transition-transform"></i>
+                    <span>اعتماد التدريب</span>
+                    <span class="mr-auto px-2 py-1 bg-red-500 text-white text-xs rounded-full">8</span>
+                </a>
+                <a href="supervision.html" class="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-50 rounded-xl font-semibold transition-all group hover:text-green-600">
+                    <i class="fas fa-eye text-lg group-hover:scale-110 transition-transform"></i>
+                    <span>الإشراف</span>
+                </a>
+                <a href="reports.html" class="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-50 rounded-xl font-semibold transition-all group hover:text-green-600">
+                    <i class="fas fa-file-alt text-lg group-hover:scale-110 transition-transform"></i>
+                    <span>التقارير</span>
+                </a>
+                <a href="evaluations.html" class="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-50 rounded-xl font-semibold transition-all group hover:text-green-600">
+                    <i class="fas fa-star text-lg group-hover:scale-110 transition-transform"></i>
+                    <span>التقييمات</span>
+                </a>
+                <a href="records.html" class="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-50 rounded-xl font-semibold transition-all group hover:text-green-600">
+                    <i class="fas fa-archive text-lg group-hover:scale-110 transition-transform"></i>
+                    <span>السجلات</span>
+                </a>
+            </nav>
+
+            <div class="p-4 border-t border-slate-200">
+                <a href="../index.html" class="flex items-center gap-3 px-4 py-3 text-red-600 hover:bg-red-50 rounded-xl font-semibold transition-all group">
+                    <i class="fas fa-sign-out-alt text-lg group-hover:scale-110 transition-transform"></i>
+                    <span>تسجيل الخروج</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 lg:mr-72">
+            <!-- Top Bar -->
+            <div class="sticky top-0 z-40 bg-white/80 backdrop-blur-xl border-b border-slate-200 shadow-sm">
+                <div class="px-4 sm:px-6 lg:px-8 py-4">
+                    <div class="flex items-center justify-between">
+                        <h2 class="text-xl font-bold text-slate-900">لوحة التحكم - جامعة الملك سعود</h2>
+                        <button class="relative p-2 text-slate-600 hover:text-green-600 hover:bg-slate-100 rounded-xl transition-all">
+                            <i class="fas fa-bell text-xl"></i>
+                            <span class="absolute top-0 left-0 w-2 h-2 bg-red-500 rounded-full"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Page Content -->
+            <div class="p-4 sm:p-6 lg:p-8">
+                <!-- Welcome -->
+                <div class="mb-8 bg-gradient-to-br from-green-600 to-emerald-600 rounded-3xl p-8 text-white shadow-2xl overflow-hidden relative">
+                    <div class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -translate-y-32 translate-x-32"></div>
+                    <div class="relative">
+                        <h1 class="text-3xl lg:text-4xl font-black mb-3">مرحباً، جامعة الملك سعود! 🎓</h1>
+                        <p class="text-xl text-white/90">نظرة عامة على التدريب الجامعي</p>
+                    </div>
+                </div>
+
+                <!-- Stats -->
+                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                    <div class="group bg-white rounded-2xl shadow-lg border border-slate-200 p-6 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex-1">
+                                <p class="text-sm font-bold text-slate-600 mb-1">إجمالي الطلاب</p>
+                                <p class="text-3xl font-black text-slate-900">324</p>
+                            </div>
+                            <div class="w-16 h-16 bg-gradient-to-br from-green-600 to-emerald-600 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                                <i class="fas fa-user-graduate text-white text-2xl"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="group bg-white rounded-2xl shadow-lg border border-slate-200 p-6 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex-1">
+                                <p class="text-sm font-bold text-slate-600 mb-1">في تدريب حالياً</p>
+                                <p class="text-3xl font-black text-slate-900">156</p>
+                            </div>
+                            <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                                <i class="fas fa-briefcase text-white text-2xl"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="group bg-white rounded-2xl shadow-lg border border-slate-200 p-6 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex-1">
+                                <p class="text-sm font-bold text-slate-600 mb-1">ينتظر الاعتماد</p>
+                                <p class="text-3xl font-black text-slate-900">8</p>
+                            </div>
+                            <div class="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                                <i class="fas fa-clock text-white text-2xl"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="group bg-white rounded-2xl shadow-lg border border-slate-200 p-6 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex-1">
+                                <p class="text-sm font-bold text-slate-600 mb-1">تقارير تنتظر</p>
+                                <p class="text-3xl font-black text-slate-900">23</p>
+                            </div>
+                            <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                                <i class="fas fa-file-alt text-white text-2xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Actions & Recent -->
+                <div class="grid lg:grid-cols-2 gap-8">
+                    <div class="bg-white rounded-2xl shadow-lg border border-slate-200 p-6">
+                        <h2 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3">
+                            <div class="w-10 h-10 bg-gradient-to-br from-green-600 to-emerald-600 rounded-xl flex items-center justify-center shadow-lg">
+                                <i class="fas fa-bolt text-white"></i>
+                            </div>
+                            إجراءات سريعة
+                        </h2>
+                        <div class="grid gap-3">
+                            <a href="approvals.html" class="p-4 bg-gradient-to-r from-green-50 to-emerald-50 hover:from-green-100 hover:to-emerald-100 rounded-xl border-2 border-green-200 hover:border-green-400 transition-all group">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-12 h-12 bg-gradient-to-br from-green-600 to-emerald-600 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                                        <i class="fas fa-check text-white"></i>
+                                    </div>
+                                    <div class="flex-1">
+                                        <h4 class="font-bold text-slate-900">اعتماد طلبات التدريب</h4>
+                                        <p class="text-sm text-slate-600">8 طلبات في الانتظار</p>
+                                    </div>
+                                    <i class="fas fa-arrow-left text-green-600"></i>
+                                </div>
+                            </a>
+
+                            <a href="reports.html" class="p-4 bg-gradient-to-r from-blue-50 to-cyan-50 hover:from-blue-100 hover:to-cyan-100 rounded-xl border-2 border-blue-200 hover:border-blue-400 transition-all group">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-12 h-12 bg-gradient-to-br from-blue-600 to-cyan-600 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                                        <i class="fas fa-file-alt text-white"></i>
+                                    </div>
+                                    <div class="flex-1">
+                                        <h4 class="font-bold text-slate-900">مراجعة التقارير</h4>
+                                        <p class="text-sm text-slate-600">23 تقرير جديد</p>
+                                    </div>
+                                    <i class="fas fa-arrow-left text-blue-600"></i>
+                                </div>
+                            </a>
+
+                            <a href="students.html" class="p-4 bg-gradient-to-r from-purple-50 to-pink-50 hover:from-purple-100 hover:to-pink-100 rounded-xl border-2 border-purple-200 hover:border-purple-400 transition-all group">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-12 h-12 bg-gradient-to-br from-purple-600 to-pink-600 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                                        <i class="fas fa-users text-white"></i>
+                                    </div>
+                                    <div class="flex-1">
+                                        <h4 class="font-bold text-slate-900">إدارة الطلاب</h4>
+                                        <p class="text-sm text-slate-600">324 طالب مسجل</p>
+                                    </div>
+                                    <i class="fas fa-arrow-left text-purple-600"></i>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl shadow-lg border border-slate-200 p-6">
+                        <h2 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3">
+                            <div class="w-10 h-10 bg-gradient-to-br from-orange-600 to-red-600 rounded-xl flex items-center justify-center shadow-lg">
+                                <i class="fas fa-bell text-white"></i>
+                            </div>
+                            إشعارات حديثة
+                        </h2>
+                        <div class="space-y-4">
+                            <div class="p-4 bg-orange-50 border-2 border-orange-200 rounded-xl">
+                                <div class="flex items-start gap-3">
+                                    <div class="w-10 h-10 bg-orange-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                                        <i class="fas fa-exclamation text-white"></i>
+                                    </div>
+                                    <div class="flex-1">
+                                        <h4 class="font-bold text-slate-900 mb-1">طلب اعتماد جديد</h4>
+                                        <p class="text-sm text-slate-600 mb-2">أحمد محمد - تدريب في شركة التقنية</p>
+                                        <span class="text-xs text-slate-500">منذ ساعتين</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="p-4 bg-blue-50 border-2 border-blue-200 rounded-xl">
+                                <div class="flex items-start gap-3">
+                                    <div class="w-10 h-10 bg-blue-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                                        <i class="fas fa-file text-white"></i>
+                                    </div>
+                                    <div class="flex-1">
+                                        <h4 class="font-bold text-slate-900 mb-1">تقرير أسبوعي جديد</h4>
+                                        <p class="text-sm text-slate-600 mb-2">سارة خالد - الأسبوع الثامن</p>
+                                        <span class="text-xs text-slate-500">منذ 4 ساعات</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="p-4 bg-green-50 border-2 border-green-200 rounded-xl">
+                                <div class="flex items-start gap-3">
+                                    <div class="w-10 h-10 bg-green-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                                        <i class="fas fa-check text-white"></i>
+                                    </div>
+                                    <div class="flex-1">
+                                        <h4 class="font-bold text-slate-900 mb-1">تم إكمال التدريب</h4>
+                                        <p class="text-sm text-slate-600 mb-2">خالد علي - تدريب ناجح</p>
+                                        <span class="text-xs text-slate-500">منذ يوم واحد</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>
